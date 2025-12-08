@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Friend Talk Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <h1>Friend Talk Tracker</h1>
+      </div>
+      <div class="actions">
+        <button id="openAddFriendBtn" class="btn primary" title="Add friend">Add Friend</button>
+        <button id="exportBtn" class="btn ghost" title="Export data">Export</button>
+        <button id="importBtn" class="btn ghost" title="Import data">Import</button>
+        <button id="resetBtn" class="btn ghost danger" title="Reset all data">Reset</button>
+        <input id="importFile" type="file" accept="application/json" hidden />
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="friendList" class="friend-list" aria-live="polite"></section>
+    </main>
+
+    
+
+    <div id="addFriendModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="addFriendTitle">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-content card">
+        <header class="modal-header">
+          <h2 id="addFriendTitle">Add a friend</h2>
+          <button id="closeAddFriendBtn" class="icon-btn" aria-label="Close add friend">✕</button>
+        </header>
+        <form id="addFriendForm" class="add-friend-form">
+          <label>
+            <span>Name</span>
+            <input id="friendName" name="friendName" type="text" placeholder="e.g., Alex" required />
+          </label>
+          <div class="grid-2">
+            <label>
+              <span>Interval</span>
+              <input id="intervalValue" name="intervalValue" type="number" min="1" step="1" placeholder="e.g., 14" required />
+            </label>
+            <label>
+              <span>Unit</span>
+              <select id="intervalUnit" name="intervalUnit">
+                <option value="days">Days</option>
+                <option value="months">Months</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Notes for next chat</span>
+            <textarea id="friendNotes" name="friendNotes" placeholder="Jot down topics…"></textarea>
+          </label>
+          <div class="modal-actions">
+            <button type="button" class="btn ghost" id="cancelAddFriendBtn">Cancel</button>
+            <button class="btn primary" type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <template id="friendItemTemplate">
+      <article class="friend-card card" data-expanded="false">
+        <header class="friend-header">
+          <div class="friend-main">
+            <h3 class="friend-name"></h3>
+            <p class="friend-subtle"><span class="interval-text"></span></p>
+          </div>
+          <div class="friend-meta">
+            <span class="last-talked"><strong class="last-talked-value">Never</strong></span>
+            <span class="badge alert hidden">Reach out</span>
+            <button class="chevron" aria-label="Expand">▾</button>
+          </div>
+        </header>
+        <div class="friend-details" aria-hidden="true">
+          <div class="details-inner">
+            <div class="progress">
+              <div class="progress-bar"></div>
+            </div>
+            <div class="friend-actions">
+              <div class="log-inline">
+                <label>
+                  <span>Mode</span>
+                  <select class="log-mode">
+                    <option value="call">Call</option>
+                    <option value="text">Text</option>
+                    <option value="dm">DM</option>
+                    <option value="meetup">Meetup</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Date</span>
+                  <input type="date" class="log-date" />
+                </label>
+                <label>
+                  <span>Next call after</span>
+                  <input type="number" class="interval-value" min="1" step="1" />
+                </label>
+                <label>
+                  <span>Unit</span>
+                  <select class="interval-unit">
+                    <option value="days">Days</option>
+                    <option value="months">Months</option>
+                  </select>
+                </label>
+                <button class="btn" data-action="log">Record</button>
+              </div>
+              
+            </div>
+            <div class="interaction-log">
+              <h4 class="section-title">Recent conversations</h4>
+              <ul class="log-list"></ul>
+            </div>
+            <div class="friend-notes">
+              <label>
+                <span>Notes for next chat</span>
+                <textarea class="notes" placeholder="Jot down topics…"></textarea>
+              </label>
+            </div>
+            <div class="friend-footer">
+              <button class="btn ghost danger" data-action="delete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
+
+
