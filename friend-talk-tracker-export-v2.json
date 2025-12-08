@@ -1,0 +1,250 @@
+{
+  "version": 2,
+  "settings": {},
+  "friends": {
+    "id-lz2edkn9-mgb81il8": {
+      "id": "id-lz2edkn9-mgb81il8",
+      "name": "Ansari",
+      "interval": {
+        "value": 6,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": null,
+      "interactions": []
+    },
+    "id-5x0js5lu-mgb81p4g": {
+      "id": "id-5x0js5lu-mgb81p4g",
+      "name": "Basani",
+      "interval": {
+        "value": 8,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-11-03T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-11-03T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-w8e5ok4y-mgb82j4s": {
+      "id": "id-w8e5ok4y-mgb82j4s",
+      "name": "Mama",
+      "interval": {
+        "value": 2,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-11-15T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-10-03T07:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-11-15T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-eowuusrd-mgb82uo3": {
+      "id": "id-eowuusrd-mgb82uo3",
+      "name": "Suraj",
+      "interval": {
+        "value": 30,
+        "unit": "days"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-10-03T07:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-10-03T07:00:00.000Z",
+          "mode": "dm"
+        }
+      ]
+    },
+    "id-j8jj64n0-mgbfat0v": {
+      "id": "id-j8jj64n0-mgbfat0v",
+      "name": "Akash",
+      "interval": {
+        "value": 15,
+        "unit": "days"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-11-08T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-10-03T07:00:00.000Z",
+          "mode": "meetup"
+        },
+        {
+          "timestamp": "2025-10-19T07:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-10-29T07:00:00.000Z",
+          "mode": "meetup"
+        },
+        {
+          "timestamp": "2025-11-08T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-l6cj0b5a-mgfo798e": {
+      "id": "id-l6cj0b5a-mgfo798e",
+      "name": "Narahari",
+      "interval": {
+        "value": 10,
+        "unit": "days"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-12-01T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-10-05T07:00:00.000Z",
+          "mode": "meetup"
+        },
+        {
+          "timestamp": "2025-11-06T08:00:00.000Z",
+          "mode": "meetup"
+        },
+        {
+          "timestamp": "2025-12-01T08:00:00.000Z",
+          "mode": "text"
+        }
+      ]
+    },
+    "id-mt21opxh-mgfs4aae": {
+      "id": "id-mt21opxh-mgfs4aae",
+      "name": "Grishma",
+      "interval": {
+        "value": 3,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-10-19T07:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-10-19T07:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-hjjk3m7j-mgg11hih": {
+      "id": "id-hjjk3m7j-mgg11hih",
+      "name": "Gourab",
+      "interval": {
+        "value": 1,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-12-02T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-10-06T07:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-10-18T07:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-11-14T08:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-12-02T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-j7i7hiys-mgoc13b1": {
+      "id": "id-j7i7hiys-mgoc13b1",
+      "name": "Ash",
+      "interval": {
+        "value": 14,
+        "unit": "days"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-12-07T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-11-03T08:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-11-08T08:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-11-19T08:00:00.000Z",
+          "mode": "call"
+        },
+        {
+          "timestamp": "2025-12-07T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-ngh0wnwy-mhdmbyec": {
+      "id": "id-ngh0wnwy-mhdmbyec",
+      "name": "Sreelu",
+      "interval": {
+        "value": 3,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-12-03T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-12-03T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    },
+    "id-gpshrblr-mhjdthcy": {
+      "id": "id-gpshrblr-mhjdthcy",
+      "name": "Amol",
+      "interval": {
+        "value": 1,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": null,
+      "interactions": []
+    },
+    "id-hrpc30f8-mi14supz": {
+      "id": "id-hrpc30f8-mi14supz",
+      "name": "Shyam",
+      "interval": {
+        "value": 6,
+        "unit": "months"
+      },
+      "notes": "",
+      "lastTalkedAt": "2025-11-23T08:00:00.000Z",
+      "interactions": [
+        {
+          "timestamp": "2025-11-23T08:00:00.000Z",
+          "mode": "call"
+        }
+      ]
+    }
+  },
+  "order": [
+    "id-lz2edkn9-mgb81il8",
+    "id-5x0js5lu-mgb81p4g",
+    "id-w8e5ok4y-mgb82j4s",
+    "id-eowuusrd-mgb82uo3",
+    "id-j8jj64n0-mgbfat0v",
+    "id-l6cj0b5a-mgfo798e",
+    "id-mt21opxh-mgfs4aae",
+    "id-hjjk3m7j-mgg11hih",
+    "id-j7i7hiys-mgoc13b1",
+    "id-ngh0wnwy-mhdmbyec",
+    "id-gpshrblr-mhjdthcy",
+    "id-hrpc30f8-mi14supz"
+  ]
+}
