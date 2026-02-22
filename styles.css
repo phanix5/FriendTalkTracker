@@ -104,11 +104,13 @@ body::after {
 .friend-card[data-rem-bucket="1"] { border-color: rgba(225,185,0,0.40); box-shadow: 0 8px 24px rgba(225,185,0,0.16); background: linear-gradient(180deg, #ffffff, #fffbe8); }
 .friend-card[data-rem-bucket="2"] { border-color: rgba(255,154,52,0.45); box-shadow: 0 8px 24px rgba(255,154,52,0.20); background: linear-gradient(180deg, #ffffff, #fff3e8); }
 .friend-card[data-rem-bucket="3"] { border-color: rgba(255,92,92,0.55); box-shadow: 0 8px 24px rgba(255,92,92,0.24); background: linear-gradient(180deg, #ffffff, #fff0f0); }
+.friend-card[data-rem-bucket="4"] { border-color: rgba(120,130,145,0.42); box-shadow: 0 8px 20px rgba(77,86,99,0.18); background: linear-gradient(180deg, #fbfcfd, #edf1f5); }
 
 .friend-card[data-rem-bucket="0"] .progress-bar { background: linear-gradient(90deg, var(--late-0), var(--accent)); }
 .friend-card[data-rem-bucket="1"] .progress-bar { background: linear-gradient(90deg, var(--late-2), #ffd67a); }
 .friend-card[data-rem-bucket="2"] .progress-bar { background: linear-gradient(90deg, var(--late-3), #ffc37a); }
 .friend-card[data-rem-bucket="3"] .progress-bar { background: linear-gradient(90deg, var(--late-4), #ff9f7a); }
+.friend-card[data-rem-bucket="4"] .progress-bar { background: linear-gradient(90deg, #8d98a8, #b6beca); }
 
 .friend-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
 .log-inline { display: grid; grid-template-columns: 140px 180px 160px 120px auto; gap: 8px; align-items: end; }

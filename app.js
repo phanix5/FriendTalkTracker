@@ -84,6 +84,10 @@
     return Math.floor(diffMs / (24 * 60 * 60 * 1000)); // can be negative when overdue
   }
 
+  function isGreyPhase(remainingDays) {
+    return Number.isFinite(remainingDays) && remainingDays < -30;
+  }
+
   function toLocalDateValue(date) {
     const pad = (n) => String(n).padStart(2, '0');
     const y = date.getFullYear(); const m = pad(date.getMonth() + 1); const d = pad(date.getDate());
@@ -162,6 +166,9 @@
   }
 
   function computeRemainingBucket(remainingDays) {
+    // Never-contacted friends should stay in urgent/red state.
+    if (!Number.isFinite(remainingDays)) return 3;
+    if (isGreyPhase(remainingDays)) return 4; // grey phase
     // green if >15, yellow if >5, orange if >2, red if <=2 (overdue or close)
     if (remainingDays > 15) return 0; // green
     if (remainingDays > 5) return 1; // yellow
@@ -174,6 +181,9 @@
       const fa = state.friends[a]; const fb = state.friends[b];
       const ra = daysRemainingUntilNextCall(fa);
       const rb = daysRemainingUntilNextCall(fb);
+      const aGrey = isGreyPhase(ra);
+      const bGrey = isGreyPhase(rb);
+      if (aGrey !== bGrey) return aGrey ? 1 : -1; // grey phase always at bottom
       // Ascending: more overdue (more negative) first
       if (ra !== rb) return ra - rb;
       return fa.name.localeCompare(fb.name);
@@ -270,9 +280,9 @@
       intUnit.value = f.interval?.unit === 'months' ? 'months' : 'days';
 
       const remainingDays = daysRemainingUntilNextCall(f);
-      const bucket = computeRemainingBucket(Number.isFinite(remainingDays) ? remainingDays : -9999);
+      const bucket = computeRemainingBucket(remainingDays);
       card.dataset.remBucket = String(bucket);
-      const highlight = remainingDays <= 0 || !Number.isFinite(remainingDays);
+      const highlight = (remainingDays <= 0 || !Number.isFinite(remainingDays)) && !isGreyPhase(remainingDays);
       if (highlight) { alertBadge.classList.remove('hidden'); card.classList.add('highlight'); } else { alertBadge.classList.add('hidden'); card.classList.remove('highlight'); }
       // Progress bar: show progress towards due date
       let ratio = 0;
